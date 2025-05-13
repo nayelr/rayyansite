@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rayyan's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <div class="profile-pic">
+          <img src="images/headshot.jpeg" alt="Rayyan Rehman" />
+        </div>
+        <div class="profile-name">Rayyan Rehman</div>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">home</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="intro">
+          <p class="greeting">HELLO, MY NAME IS RAYYAN</p>
+          <h1>I build stuff.</h1>
+          <p class="description">
+            I'm an engineering student at
+            <a
+              href="https://engineering.purdue.edu/Engr"
+              target="_blank"
+              class="highlight-link"
+              >Purdue</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="featured" class="featured-posts">
+        <h2>Featured Projects</h2>
+        <div class="post-grid">
+          <!-- Project 1 -->
+          <div class="post-card">
+            <a href="projects/robotics.html">
+              <div class="post-image">
+                <img src="images/robotnme.png" alt="Robotics Team Build" />
+              </div>
+              <h3>Robotics Team Build Captain</h3>
+            </a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="post-card">
+            <a href="projects/typewriter.html">
+              <div class="post-image">
+                <img src="images/typewriter.png" alt="Typewriter Restoration" />
+              </div>
+              <h3>Typewriter Restoration</h3>
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="post-card">
+            <a href="projects/3d-printer.html">
+              <div class="post-image">
+                <img src="images/3d printer.png" alt="Modified 3D Printer" />
+              </div>
+              <h3>Modified 3D Printer</h3>
+            </a>
+          </div>
+        </div>
+        <div class="see-all">
+          <a href="projects.html"
+            >See All Projects <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
