@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Rayyan Rehman</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <div class="profile-pic">
+          <img src="/images/headshot.jpeg" alt="Rayyan Rehman" />
+        </div>
+        <div class="profile-name">Rayyan Rehman</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li class="active"><a href="/projects-list">projects</a></li>
+          <li><a href="/about">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <h1>CNC'd Nameplate</h1>
+        <div class="project-meta">
+          <span class="date">April 2023</span>
+          <span class="category">CNC Machining</span>
+        </div>
+      </section>
+
+      <section class="project-showcase">
+        <div class="project-image">
+          <img src="/images/nameplate.png" alt="CNC'd Nameplate" />
+        </div>
+
+        <div class="project-details">
+          <h2>Intent & Design Constraints</h2>
+          <ul>
+            <li>
+              Wanted to CNC a personalized thank you sign for our robotics team
+              mentor
+            </li>
+            <li>Should be:</li>
+            <ul>
+              <li>Design shaped around size of wood block</li>
+              <li>Aesthetically pleasing</li>
+              <li>Easily CNC'able</li>
+            </ul>
+          </ul>
+
+          <div class="design-image">
+            <img src="/images/nameplate2.png" alt="Nameplate Design" />
+            <p class="image-caption">The finalized design</p>
+          </div>
+
+          <h2>Methods</h2>
+          <ul>
+            <li>Used OnShape to create a design around the block of wood</li>
+            <li>
+              Used Inventor CAM to create and simulate tool paths (see right)
+            </li>
+            <li>Used team's CNC machine to mill out my design</li>
+            <li>Used wood finish to finish it off</li>
+          </ul>
+
+          <div class="video-container">
+            <iframe
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/P9P09QetYls"
+              title="CNC Toolpath"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p class="video-caption">
+              A simulation of the path the machine would take
+            </p>
+          </div>
+
+          <div class="final-image">
+            <img src="/images/nameplate.png" alt="Final Nameplate" />
+          </div>
+
+          <h2>Results</h2>
+          <p>A beautiful sign that commemorates a wonderful mentor!</p>
+        </div>
+      </section>
+
+      <section class="project-navigation">
+        <a href="/projects-list" class="back-to-projects"
+          ><i class="fas fa-arrow-left"></i> Back to Projects</a
+        >
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

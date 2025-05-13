@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Rayyan Rehman</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,46 +23,36 @@
     <header>
       <div class="profile">
         <div class="profile-pic">
-          <img src="images/headshot.jpeg" alt="Rayyan Rehman" />
+          <img src="/images/headshot.jpeg" alt="Rayyan Rehman" />
         </div>
         <div class="profile-name">Rayyan Rehman</div>
       </div>
       <nav>
         <ul>
-          <li class="active"><a href="/">home</a></li>
-          <li><a href="/projects-list">projects</a></li>
+          <li><a href="/">home</a></li>
+          <li class="active"><a href="/projects-list">projects</a></li>
           <li><a href="/about">about</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="home" class="hero">
-        <div class="intro">
-          <p class="greeting">HELLO, MY NAME IS RAYYAN</p>
-          <h1>I build stuff.</h1>
-          <p class="description">
-            I'm an engineering student at
-            <a
-              href="https://engineering.purdue.edu/Engr"
-              target="_blank"
-              class="highlight-link"
-              >Purdue</a
-            >
-          </p>
-        </div>
+      <section class="page-header">
+        <h1>Projects</h1>
+        <p class="subtitle">
+          A collection of my engineering and maker projects
+        </p>
       </section>
 
-      <section id="featured" class="featured-posts">
-        <h2>Featured Projects</h2>
+      <section class="projects-grid">
         <div class="post-grid">
           <!-- Project 1 -->
           <div class="post-card">
-            <a href="/projects/robotics">
+            <a href="/projects/nameplate">
               <div class="post-image">
-                <img src="images/robotnme.png" alt="Robotics Team Build" />
+                <img src="/images/nameplate.png" alt="CNC'd Nameplate" />
               </div>
-              <h3>Robotics Team Build Captain</h3>
+              <h3>CNC'd Nameplate</h3>
             </a>
           </div>
 
@@ -70,7 +60,10 @@
           <div class="post-card">
             <a href="/projects/typewriter">
               <div class="post-image">
-                <img src="images/typewriter.png" alt="Typewriter Restoration" />
+                <img
+                  src="/images/typewriter.png"
+                  alt="Typewriter Restoration"
+                />
               </div>
               <h3>Typewriter Restoration</h3>
             </a>
@@ -78,22 +71,37 @@
 
           <!-- Project 3 -->
           <div class="post-card">
+            <a href="/projects/robotics">
+              <div class="post-image">
+                <img src="/images/robotnme.png" alt="Robotics Team Build" />
+              </div>
+              <h3>Robotics Team Build Captain</h3>
+            </a>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="post-card">
+            <a href="/projects/pen-holder">
+              <div class="post-image">
+                <img src="/images/pen holder.png" alt="Fountain Pen Holder" />
+              </div>
+              <h3>Fountain Pen Holder</h3>
+            </a>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="post-card">
             <a href="/projects/3d-printer">
               <div class="post-image">
-                <img src="images/3d printer.png" alt="Modified 3D Printer" />
+                <img src="/images/3d printer.png" alt="Modified 3D Printer" />
               </div>
               <h3>Modified 3D Printer</h3>
             </a>
           </div>
         </div>
-        <div class="see-all">
-          <a href="/projects-list"
-            >See All Projects <i class="fas fa-arrow-right"></i
-          ></a>
-        </div>
       </section>
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
