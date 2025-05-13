@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --bg-color: #1C1F26;
+  --bg-color: #121a25;  /* Darker background color */
   --text-color: #FFFFFF;
   --accent-color: #f87171;
   --secondary-color: #6b7280;
@@ -85,6 +85,21 @@ nav li {
   position: relative;
 }
 
+nav li::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+nav li:hover::after {
+  width: 100%;
+}
+
 nav li.active::after {
   content: '';
   position: absolute;
@@ -92,6 +107,12 @@ nav li.active::after {
   left: 0;
   width: 100%;
   height: 3px;
+  background-color: var(--accent-color);
+  transition: none;
+}
+
+nav li.active:hover::after {
+  width: 100%;
   background-color: var(--accent-color);
 }
 
@@ -125,11 +146,11 @@ main {
 
 .greeting {
   color: var(--accent-color);
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 h1 {
@@ -140,34 +161,47 @@ h1 {
   line-height: 1.1;
 }
 
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
 .description {
   font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
-  max-width: 600px;
-  color: #d1d5db;
-  line-height: 1.6;
+  font-size: 2rem;
+  max-width: 850px;
+  color: var(--text-color);
+  line-height: 1.3;
+  font-weight: 400;
 }
 
 .description a {
-  color: var(--secondary-color);
-  text-decoration: underline;
+  color: #CFB991;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .description a:hover {
-  color: var(--text-color);
+  color: #CFB991;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Special styling for the Purdue link to match screenshot */
 .highlight-link {
-  color: var(--text-color);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  color: #CFB991;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .highlight-link:hover {
-  color: var(--accent-color);
+  color: #CFB991;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Featured Posts */
@@ -365,6 +399,35 @@ footer {
   font-size: 1.25rem;
 }
 
+/* Minimal Footer */
+.minimal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.minimal-footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.minimal-footer .social-links a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.minimal-footer .social-links a:hover {
+  color: var(--accent-color);
+}
+
+.minimal-footer .copyright {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+}
+
 /* Add padding to sides */
 header, main, footer .footer-container {
   padding-left: 2rem;
@@ -392,8 +455,18 @@ header, main, footer .footer-container {
     margin-bottom: 1.5rem;
   }
   
+  .hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .hero {
     padding: 4rem 0 3rem 0;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    max-width: 100%;
   }
 
   .footer-container {
@@ -509,12 +582,16 @@ header, main, footer .footer-container {
     font-size: 2.5rem;
   }
   
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
   .greeting {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   
   .description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   header, main, footer .footer-container {
@@ -567,6 +644,10 @@ header, main, footer .footer-container {
     font-size: 2.2rem;
   }
   
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
   .post-card {
     height: 260px;
   }
@@ -598,7 +679,7 @@ header, main, footer .footer-container {
 .subtitle {
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
-  color: #d1d5db;
+  color: var(--text-color);
   max-width: 600px;
   margin: 0 auto;
 }
