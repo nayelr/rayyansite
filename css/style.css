@@ -129,6 +129,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 h1 {
@@ -376,15 +377,23 @@ header, main, footer .footer-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   nav ul {
     width: 100%;
     justify-content: space-between;
+    gap: 1rem;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero {
+    padding: 4rem 0 3rem 0;
   }
 
   .footer-container {
@@ -403,6 +412,7 @@ header, main, footer .footer-container {
 
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .about-image {
@@ -414,10 +424,12 @@ header, main, footer .footer-container {
   .content-grid.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
   }
   
   .content-image {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
   
   /* Project page responsive adjustments */
@@ -433,8 +445,18 @@ header, main, footer .footer-container {
   }
   
   .project-details h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-details h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project-details p,
+  .project-details li {
+    font-size: 1rem;
   }
   
   .project-image,
@@ -449,6 +471,115 @@ header, main, footer .footer-container {
   .back-to-projects {
     padding: 0.5rem 1rem;
     font-size: 1rem;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .page-header {
+    padding: 3rem 1rem 1.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .video-container iframe {
+    border-radius: 0.5rem;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .greeting {
+    font-size: 0.8rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  header, main, footer .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .project-details ul {
+    padding-left: 1.2rem;
+  }
+  
+  .post-card {
+    height: 280px;
+  }
+  
+  .post-image {
+    height: 180px;
+  }
+  
+  h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav ul {
+    gap: 0.75rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .post-card {
+    height: 260px;
+  }
+  
+  .post-image {
+    height: 160px;
+  }
+}
+
+/* Add viewport height fix for mobile browsers */
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    min-height: 60vh;
   }
 }
 
